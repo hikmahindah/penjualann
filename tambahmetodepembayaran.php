@@ -17,11 +17,11 @@
               TAMBAH DATA
             </div>
             <div class="card-body">
-              <form action="simpan.php" method="POST">
+              <form action="simpanmetodepembayaran.php" method="POST">
                 
                 <div class="form-group">
                   <label>id_metode_pembayaran</label>
-                  <input type="text" name="id_metode_pembayaran" placeholder="Masukkan id_metode_pembayaran" class="form-control">
+                  <input type="hidden" name="id_metode_pembayaran" placeholder="Masukkan id_metode_pembayaran" class="form-control">
                 </div>
 
                 <div class="form-group">

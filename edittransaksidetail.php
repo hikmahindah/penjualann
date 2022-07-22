@@ -2,9 +2,9 @@
   
   include('koneksii.php');
   
-  $id_kasir = $_GET['id_kasir'];
+  $id_transaksi_detail = $_GET['id_transaksi_detail'];
   
-  $query = "SELECT * FROM kasir WHERE id_kasir = $id_kasir LIMIT 1";
+  $query = "SELECT * FROM transaksi_detail WHERE id_transaksi_detail= $id_transaksi_detail LIMIT 1";
 
   $result = mysqli_query($koneksi, $query);
 
@@ -18,7 +18,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <title>Edit kasir</title>
+    <title>Edit transaksi detail</title>
   </head>
 
   <body>
@@ -28,37 +28,37 @@
         <div class="col-md-8 offset-md-2">
           <div class="card">
             <div class="card-header">
-              EDIT KASIR
+              EDIT TRANSAKSI DETAIL
             </div>
             <div class="card-body">
-              <form action="update kasir.php" method="POST">
+              <form action="updatetransaksi_detail.php" method="POST">
                 
                 <div class="form-group">
-                  <label>id_kasir</label>
-                  <input type="hidden" name="id_kasir" value="<?php echo $row[''] ?>" placeholder="Masukkan id_kasir" class="form-control”>
-                  <input type="hidden" name="nama_kasir" value="<?php echo $row['nama_kasir'] ?>">
+                  <label>id_transaksi_detail</label>
+                  <input type="hidden" name="id_transaksi_detail" value="<?php echo $row['id_transaksi_detail'] ?>" placeholder="Masukkan id_transaksi_detail" class="form-control”>
+                  <input type="hidden" name="id_transaksi" value="<?php echo $row['id_transaksi'] ?>">
                 </div>
 
                 <div class="form-group">
-                  <label>alamat</label>
-                  <input type="text" name="alamat" value="<?php echo $row['alamat'] ?>" placeholder="Masukkan alamat" class="form-control">
+                  <label>id_barang</label>
+                  <input type="text" name="id_barang" value="<?php echo $row['id_barang'] ?>" placeholder="Masukkan id_barang" class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label>jenis_kelamin</label>
-                  <input type="text" name="jenis_kelamin" value="<?php echo $row['jenis_kelamin'] ?>" placeholder="Masukkan jenis_kelamin" class="form-control">
+                  <label>jumlah</label>
+                  <input type="text" name="jumlah" value="<?php echo $row['jumlah'] ?>" placeholder="Masukkan jumlah" class="form-control">
                 </div>
 
                 <div class="form-group">
-                    <label>no_tlpn</label>
-                    <input type="text" name="no_tlpn" value="<?php echo $row['no_tlpn'] ?>" placeholder="Masukkan no_tlpn" class="form-control">
+                    <label>harga_jual</label>
+                    <input type="text" name="harga_jual" value="<?php echo $row['harga_jual'] ?>" placeholder="Masukkan harga_jual" class="form-control">
                   </div>
 
                   <div class="form-group">
-                    <label>id_cabang</label>
-                    <input type="text" name="id_cabang" value="<?php echo $row['id_cabang'] ?>" placeholder="Masukkan id_cabang" class="form-control">
+                    <label>total_harga</label>
+                    <input type="text" name="total_harga" value="<?php echo $row['total_harga'] ?>" placeholder="Masukkan total_harga" class="form-control">
                   </div>
-                
+               
                 <button type="submit" class="btn btn-success">UPDATE</button>
                 <button type="reset" class="btn btn-warning">RESET</button>
 

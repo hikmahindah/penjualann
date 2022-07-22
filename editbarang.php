@@ -4,7 +4,7 @@
   
   $id_barang = $_GET['id_barang'];
   
-  $query = "SELECT * FROM barang WHERE id_barang = $id_barang LIMIT 1";
+  $query = "SELECT * FROM barang WHERE id_barang = '$id_barang'  ";
 
   $result = mysqli_query($koneksi, $query);
 
@@ -31,12 +31,12 @@
               EDIT BARANG
             </div>
             <div class="card-body">
-              <form action="update barang.php" method="POST">
+              <form action="updatedatabarang.php" method="POST">
                 
                 <div class="form-group">
-                  <label>id_barang</label>
-                  <input type="text" name="id_barang" value="<?php echo $row['id_barang'] ?>" placeholder="Masukkan id_barang" class="form-control”>
-                  <input type="hidden" name="nama_barang" value="<?php echo $row['nama_barang'] ?>">
+                 
+                  <input type="hidden" name="id_barang" value="<?php echo $row['id_barang'] ?>" placeholder="Masukkan id_barang" class="form-control”>
+                  <input type="hidden" name="id_barang" value="<?php echo $row['id_barang'] ?>">
                 </div>
 
                 <div class="form-group">
@@ -46,7 +46,7 @@
 
                 <div class="form-group">
                   <label>stok</label>
-                  <input type="text" name="stok" value="<?php echo $row['nama_barang'] ?>" placeholder="Masukkan stok" class="form-control">
+                  <input type="text" name="stok" value="<?php echo $row['stok'] ?>" placeholder="Masukkan stok" class="form-control">
                 </div>
 
                 <div class="form-group">
@@ -71,7 +71,7 @@
 
                   <div class="form-group">
                     <label>tanggal_masuk</label>
-                    <input type="text" name="tanggal_masuk" value="<?php echo $row['tanggal_masuk'] ?>" placeholder="Masukkan tanggal_masuk" class="form-control">
+                    <input type="date" name="tanggal_masuk" value="<?php echo $row['tanggal_masuk'] ?>" placeholder="Masukkan tanggal_masuk" class="form-control">
                   </div>
                 
                 <button type="submit" class="btn btn-success">UPDATE</button>

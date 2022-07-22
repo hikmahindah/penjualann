@@ -17,11 +17,11 @@
               TAMBAH DATA
             </div>
             <div class="card-body">
-              <form action="simpan.php" method="POST">
+              <form action="simpantransaksidetail.php" method="POST">
                 
                 <div class="form-group">
                   <label>id_transaski_datail</label>
-                  <input type="text" name="id_transaksi_detail" placeholder="Masukkan id_transaksi_detail" class="form-control">
+                  <input type="hidden" name="id_transaksi_detail" placeholder="Masukkan id_transaksi_detail" class="form-control">
                 </div>
 
                 <div class="form-group">
@@ -43,12 +43,7 @@
                   <label>harga_jual</label>
                   <input type="text" name="harga_jual" placeholder="Masukkan harga_jual" class="form-control">
                 </div>
-
-                <div class="form-group">
-                  <label>total_harga</label>
-                  <input type="text" name="total_harga" placeholder="Masukkan total_harga" class="form-control">
-                </div>
-                
+          
                  <button type="submit" class="btn btn-success">SIMPAN</button>
                 <button type="reset" class="btn btn-warning">RESET</button>
 

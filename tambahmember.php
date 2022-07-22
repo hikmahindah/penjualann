@@ -17,11 +17,11 @@
               TAMBAH DATA
             </div>
             <div class="card-body">
-              <form action="simpan.php" method="POST">
+              <form action="simpanmember.php" method="POST">
                 
                 <div class="form-group">
                   <label>id_member</label>
-                  <input type="text" name="id_member" placeholder="Masukkan id_member" class="form-control">
+                  <input type="hidden" name="id_member" placeholder="Masukkan id_member" class="form-control">
                 </div>
 
                 <div class="form-group">

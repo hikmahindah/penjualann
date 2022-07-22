@@ -6,6 +6,47 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <title>Data transaksi</title>
+    <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">PENJUALAN</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <a class="nav-link active" aria-current="page" href="tampilcabang.php">Cabang</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="tampildatabarang.php">Barang</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="tampilkasir.php">Kasir</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="tampilkategori.php">Kategori</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="tampilmember.php">Member</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="tampilmetodepembayaran.php">Metode Pembayaran</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="tampilperusahaan.php">Perusahaan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="tampilsupplier.php">Supplier</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="tampiltransaksi.php">Transaksi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="tampiltransaksidetail.php">Transaksi Detail</a>
+        </li>
+      </form>
+    </div>
+  </div>
+</nav>
   </head>
 
   <body>
@@ -31,6 +72,8 @@
                     <th scope="col">nama_pembeli</th>
                     <th scope="col">id_metode_pembayaran</th>
                     <th scope="col">total_bayar</th>
+                    <th scope="col">ppn</th>
+                    <th scope="col">diskon</th>
                     <th scope="col">AKSI</th>
                   </tr>
                 </thead>
@@ -52,6 +95,9 @@
                       <td><?php echo $row['nama_pembeli'] ?></td>
                       <td><?php echo $row['id_metode_pembayaran'] ?></td>
                       <td><?php echo $row['total_bayar'] ?></td>
+                      <td><?php echo $row['ppn'] ?></td>
+                      <td><?php echo $row['diskon'] ?></td>
+
                       <td class="text-center">
                         <a href="edittransaksi.php?id=<?php echo $row['id_transaksi'] ?>" class="btn btn-sm btn-primary">EDIT</a>
                         <a href="hapustransaksi.php?id=<?php echo $row['id_transaksi'] ?>" class="btn btn-sm btn-danger">HAPUS</a>

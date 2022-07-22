@@ -31,11 +31,11 @@
               EDIT METODE PEMBAYARAN
             </div>
             <div class="card-body">
-              <form action="update metode_pembayaran.php" method="POST">
+              <form action="updatemetode_pembayaran.php" method="POST">
                 
                 <div class="form-group">
                   <label>id_metode_pembayaran</label>
-                  <input type="text" name="id_metode_pembayaran" value="<?php echo $row['id_metode_pembayaran'] ?>" placeholder="Masukkan id_metode_pembayaran" class="form-control”>
+                  <input type="hidden" name="id_metode_pembayaran" value="<?php echo $row['id_metode_pembayaran'] ?>" placeholder="Masukkan id_metode_pembayaran" class="form-control”>
                   <input type="hidden" name="nama_metode_pembayaran" value="<?php echo $row['nama_metode_pembayaran'] ?>">
                 </div>
                

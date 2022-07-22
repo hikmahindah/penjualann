@@ -2,9 +2,9 @@
   
   include('koneksii.php');
   
-  $id_kasir = $_GET['id_kasir'];
+  $id_perusahaan = $_GET['id_perusahaan'];
   
-  $query = "SELECT * FROM kasir WHERE id_kasir = $id_kasir LIMIT 1";
+  $query = "SELECT * FROM perusahaan WHERE id_perusahaan= $id_perusahaan LIMIT 1";
 
   $result = mysqli_query($koneksi, $query);
 
@@ -18,7 +18,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <title>Edit kasir</title>
+    <title>Edit perusahaan</title>
   </head>
 
   <body>
@@ -28,15 +28,15 @@
         <div class="col-md-8 offset-md-2">
           <div class="card">
             <div class="card-header">
-              EDIT KASIR
+              EDIT PERUSAHAAN
             </div>
             <div class="card-body">
-              <form action="update kasir.php" method="POST">
+              <form action="updateperusahaan.php" method="POST">
                 
                 <div class="form-group">
-                  <label>id_kasir</label>
-                  <input type="hidden" name="id_kasir" value="<?php echo $row[''] ?>" placeholder="Masukkan id_kasir" class="form-control”>
-                  <input type="hidden" name="nama_kasir" value="<?php echo $row['nama_kasir'] ?>">
+                  <label>id_perusahaan</label>
+                  <input type="hidden" name="id_perusahaan" value="<?php echo $row['id_perusahaan'] ?>" placeholder="Masukkan id_perusahaan" class="form-control”>
+                  <input type="hidden" name="nama_perusahaan" value="<?php echo $row['nama_perusahaan'] ?>">
                 </div>
 
                 <div class="form-group">
@@ -45,20 +45,26 @@
                 </div>
 
                 <div class="form-group">
-                  <label>jenis_kelamin</label>
-                  <input type="text" name="jenis_kelamin" value="<?php echo $row['jenis_kelamin'] ?>" placeholder="Masukkan jenis_kelamin" class="form-control">
+                  <label>no_tlpn</label>
+                  <input type="text" name="no_tlpn" value="<?php echo $row['no_tlpn'] ?>" placeholder="Masukkan no_tlpn" class="form-control">
                 </div>
 
                 <div class="form-group">
-                    <label>no_tlpn</label>
-                    <input type="text" name="no_tlpn" value="<?php echo $row['no_tlpn'] ?>" placeholder="Masukkan no_tlpn" class="form-control">
+                    <label>email</label>
+                    <input type="text" name="email" value="<?php echo $row['email'] ?>" placeholder="Masukkan email" class="form-control">
                   </div>
 
                   <div class="form-group">
-                    <label>id_cabang</label>
-                    <input type="text" name="id_cabang" value="<?php echo $row['id_cabang'] ?>" placeholder="Masukkan id_cabang" class="form-control">
+                    <label>tanggal_berdiri</label>
+                    <input type="text" name="tanggal_berdiri" value="<?php echo $row['tanggal_berdiri'] ?>" placeholder="Masukkan tanggal_berdiri" class="form-control">
                   </div>
-                
+
+                  <div class="form-group">
+                    <label>npwp</label>
+                    <input type="text" name="npwp" value="<?php echo $row['npwp'] ?>" placeholder="Masukkan npwp" class="form-control">
+                  </div>
+
+               
                 <button type="submit" class="btn btn-success">UPDATE</button>
                 <button type="reset" class="btn btn-warning">RESET</button>
 

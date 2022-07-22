@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <title>Tambah cabang</title>
+    <title>Tambah Barang</title>
   </head>
 
   <body>
@@ -17,36 +17,47 @@
               TAMBAH DATA
             </div>
             <div class="card-body">
-              <form action="simpan.php" method="POST">
+              <form action="simpandatabarang.php" method="POST">
                 
                 <div class="form-group">
-                  <label>id_cabang</label>
-                  <input type="text" name="id_cabang" placeholder="Masukkan id_cabang" class="form-control">
+                  <input type="hidden" name="id_barang" placeholder="Masukkan id_barang" class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label>nama_cabang</label>
-                  <input type="text" name="nama_cabang" placeholder="Masukkan nama_cabang" class="form-control">
+                  <label>nama barang</label>
+                  <input type="text" name="nama_barang" placeholder="Masukkan nama_barang" class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label>alamat</label>
-                  <textarea class="form-control" name="alamat" placeholder="Masukkan alamat” rows="4"></textarea>
+                  <label>stok</label>
+                  <input type="text" name="stok" placeholder="Masukkan stok" class="form-control">
+                </div>
+
+
+                <div class="form-group">
+                  <label>harga_modal</label>
+                  <input type="text" name="harga_modal" placeholder="Masukkan harga_modal" class="form-control">
+                </div>
+
+
+                <div class="form-group">
+                  <label>harga_jual</label>
+                  <input type="text" name="harga_jual" placeholder="Masukkan harga_jual" class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label>no_tlpn</label>
-                  <textarea class="form-control" name="no_tlpn" placeholder="Masukkan no_tlpn” rows="4"></textarea>
+                  <label>id_kategori</label>
+                  <input type="text" name="id_kategori" placeholder="Masukkan id_kategori" class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label>email</label>
-                  <textarea class="form-control" name="email" placeholder="Masukkan email” rows="4"></textarea>
+                  <label>id_supplier</label>
+                  <input type="text" name="id_supplier" placeholder="Masukkan id_supplier" class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label>id_perusahaan</label>
-                  <textarea class="form-control" name="id_perusahaan" placeholder="Masukkan id_perusahaan” rows="4"></textarea>
+                  <label>tanggal_masuk</label>
+                  <input type="date" name="tanggal_masuk" placeholder="Masukkan tanggal_masuk" class="form-control">
                 </div>
                 
                 <button type="submit" class="btn btn-success">SIMPAN</button>

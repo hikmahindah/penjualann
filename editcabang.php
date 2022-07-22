@@ -2,9 +2,9 @@
   
   include('koneksii.php');
   
-  $id_cabang = $_GET['id_cabang'];
+  $id = $_GET['id'];
   
-  $query = "SELECT * FROM cabang WHERE id_cabang = $id_cabang LIMIT 1";
+  $query = "SELECT * FROM cabang WHERE id_cabang = $id";
 
   $result = mysqli_query($koneksi, $query);
 
@@ -31,12 +31,16 @@
               EDIT CABANG
             </div>
             <div class="card-body">
-              <form action="update cabang.php" method="POST">
+              <form action="updatecabang.php" method="POST">
                 
                 <div class="form-group">
-                  <label>id_cabang</label>
-                  <input type="text" name="id_cabang" value="<?php echo $row['id_cabang'] ?>" placeholder="Masukkan id_cabang" class="form-control”>
-                  <input type="hidden" name="nama_cabang" value="<?php echo $row['nama_cabang'] ?>">
+                  <input type="hidden" name="id_cabang" value="<?php echo $row['id_cabang'] ?>" placeholder="Masukkan id_cabang" class="form-control”>
+                  <input type="hidden" name="id_cabang" value="<?php echo $row['id_cabang'] ?>">
+                </div>
+
+                <div class="form-group">
+                  <label>nama_cabang</label>
+                  <input type="text" name="nama_cabang" value="<?php echo $row['nama_cabang'] ?>" placeholder="Masukkan nama_cabang" class="form-control">
                 </div>
 
                 <div class="form-group">

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <title>Tambah Barang</title>
+    <title>Tambah cabang</title>
   </head>
 
   <body>
@@ -17,21 +17,38 @@
               TAMBAH DATA
             </div>
             <div class="card-body">
-              <form action="simpan.php" method="POST">
+              <form action="simpancabang.php" method="POST">
                 
                 <div class="form-group">
-                  <label>id_barang</label>
-                  <input type="text" name="id_barang" placeholder="Masukkan id_barang" class="form-control">
+                  <input type="hidden" name="id_cabang" placeholder="Masukkan id_cabang" class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label>nama barang</label>
-                  <input type="text" name="nama_barang" placeholder="Masukkan nama_barang" class="form-control">
+                  <label>nama_cabang</label>
+                  <input type="text" name="nama_cabang" placeholder="Masukkan nama_cabang" class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label>stok</label>
-                  <textarea class="form-control" name="stok" placeholder="Masukkan stok” rows="4"></textarea>
+                  <label>alamat</label>
+                  <input type="text" name="alamat" placeholder="Masukkan alamat" class="form-control">
+                </div>
+
+
+                <div class="form-group">
+                  <label>no_tlpn</label>
+                  <input type="text" name="no_tlpn" placeholder="Masukkan no_tlpn" class="form-control">
+                </div>
+
+
+                <div class="form-group">
+                  <label>email</label>
+                  <input type="text" name="email" placeholder="Masukkan email" class="form-control">
+                </div>
+
+
+                <div class="form-group">
+                  <label>id_perusahaan</label>
+                  <input type="text" name="id_perusahaan" placeholder="Masukkan id_perusahaan" class="form-control">
                 </div>
                 
                 <button type="submit" class="btn btn-success">SIMPAN</button>
