@@ -17,11 +17,11 @@
               TAMBAH DATA
             </div>
             <div class="card-body">
-              <form action="simpan.php" method="POST">
+              <form action="simpanperusahaan.php" method="POST">
                 
                 <div class="form-group">
                   <label>id_perusahaan</label>
-                  <input type="text" name="id_perusahaan" placeholder="Masukkan id_perusahaan" class="form-control">
+                  <input type="hidden" name="id_perusahaan" placeholder="Masukkan id_perusahaan" class="form-control">
                 </div>
 
                 <div class="form-group">
